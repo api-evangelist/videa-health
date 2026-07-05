@@ -1,0 +1,44 @@
+aid: videa-health
+url: https://raw.githubusercontent.com/api-evangelist/videa-health/refs/heads/main/apis.yml
+name: VideaHealth
+kind: company
+description: VideaHealth (VideaAI) is an FDA-cleared dental artificial intelligence
+  platform that analyzes dental radiographs to detect clinical findings such as
+  caries, bone loss, calculus, and periapical lesions, and to surface aligner and
+  implant treatment opportunities. VideaAI runs as ambient, chairside AI embedded
+  directly inside dental practice-management and imaging systems (Dentrix, Denticon,
+  Open Dental, Eaglesoft, Carestream, Dexis, Apteryx XVWeb, and others) - as soon as
+  an X-ray is captured, the platform analyzes it and returns findings in the tools
+  clinicians already use. Its detection, findings, study, and integration capabilities
+  are delivered through partner-gated, embedded integrations rather than a public,
+  self-serve developer API; there is no publicly documented REST API, developer
+  portal, SDK, or OpenAPI definition as of this writing.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Dental
+- Healthcare
+- Artificial Intelligence
+- Medical Imaging
+- Radiograph Analysis
+- Diagnostics
+- Computer Vision
+- FDA Cleared
+- Gated API
+created: '2026-07-05'
+modified: '2026-07-05'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: Website
+  url: https://www.videa.ai
+- type: LinkedIn
+  url: https://www.linkedin.com/company/videaai
+- type: Resources
+  url: https://videa.ai/resources
+- type: Platform
+  url: https://www.videa.ai/platform
+- type: News
+  url: https://www.videa.ai/news
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

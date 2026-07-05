@@ -1,0 +1,97 @@
+aid: videa-health
+name: VideaHealth
+review:
+  question: Does VideaHealth expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-05'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. VideaHealth (VideaAI) does not publish any
+    public API - REST, WebSocket, or SSE. Its dental-radiograph analysis is
+    delivered as ambient AI embedded inside third-party practice-management and
+    imaging systems through partner-gated integrations, not through a public,
+    self-serve, developer-facing transport. With no documented public API surface
+    of any kind, there is nothing to model in an AsyncAPI document, and there is
+    no public WebSocket endpoint to describe.
+findings:
+  summary: |
+    VideaHealth does not publish a documented public WebSocket API. In fact,
+    VideaHealth (which markets its product as VideaAI, at videa.ai) does not
+    publish a documented public API of any kind - no REST reference, no developer
+    portal, no SDK, no OpenAPI definition, and no WebSocket (ws:// or wss://)
+    endpoint. VideaAI is an FDA-cleared dental artificial-intelligence platform
+    that analyzes dental X-rays to detect findings (caries, bone loss, calculus,
+    periapical lesions) and to identify aligner and implant candidates. It is
+    designed as "ambient" chairside AI: once an X-ray is captured, VideaAI
+    analyzes the image in the background and surfaces findings inside the dental
+    tools clinicians already use. Access is business-to-business and partner-gated
+    - VideaAI is embedded directly into practice-management systems (Dentrix Core,
+    Dentrix Ascend, Dentrix Enterprise, Denticon, Open Dental, Eaglesoft) and
+    imaging software (Carestream, Dexis, Apteryx XVWeb, SOTA, Dentsply Sirona
+    Sidexis, and many others) via commercial integration agreements, not through
+    a public developer API. Pricing is contact-sales only.
+  accessModel: |
+    Partner-gated / embedded. There is no public sign-up or self-serve developer
+    onboarding. Organizations engage VideaHealth through a sales/demo process
+    ("Book a Demo"), and integration is delivered as an embedded AI layer inside
+    the customer's existing PMS and imaging stack. Any programmatic interface that
+    exists (for pushing radiographs to the analysis engine or returning detections)
+    is exposed to integration partners under agreement and is not publicly
+    documented.
+  endpointsModeled: true
+  endpointsModeledNote: |
+    No API endpoints are published by VideaHealth, so none are asserted as real in
+    this catalog entry (apis: [] in apis.yml). The logical capability areas below
+    are a HONEST MODEL of what a VideaHealth developer/partner API would plausibly
+    expose, based on the product's described behavior. They are NOT confirmed,
+    NOT documented, and MUST NOT be treated as real endpoints or base URLs.
+  logicalApisModeled:
+    - name: Image / Radiograph Analysis API
+      note: Submit a dental radiograph (bitewing, periapical, panoramic) for AI analysis. Modeled, not documented.
+    - name: Findings / Detections API
+      note: Retrieve detected clinical findings (caries, bone loss, calculus, periapical lesions) with per-tooth localization and confidence. Modeled, not documented.
+    - name: Studies API
+      note: Group radiographs and findings into a patient study/exam and retrieve results. Modeled, not documented.
+    - name: Integrations API
+      note: Bind VideaAI into a practice-management or imaging system so captured X-rays are analyzed and findings are surfaced in-context. Delivered as partner-gated embedded integrations. Modeled, not documented.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public REST API reference or base URL is documented by VideaHealth.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented anywhere in VideaHealth's public materials as of the review date.
+    - protocol: SSE
+      scheme: https
+      documented: false
+      note: No Server-Sent Events streaming interface is documented.
+  endpointsConfirmedRest: []
+sources:
+  - url: https://www.videa.ai
+    type: Website
+    note: Marketing site. Product positioned as ambient dental AI; "Book a Demo" is the only call to action. No API or developer links.
+  - url: https://www.videa.ai/platform
+    type: Documentation
+    note: Platform overview. Describes embedded integrations with PMS and imaging systems; no developer API, SDK, webhooks, or endpoints mentioned.
+  - url: https://videa.ai/resources
+    type: Resources
+    note: Marketing resources (blog, guides, webinars). No developer or API documentation.
+  - url: https://www.linkedin.com/company/videaai
+    type: LinkedIn
+    note: Company profile.
+  - url: https://detect.videahealth.io/
+    type: Application
+    note: Gated product application surface (login/app), not a developer or API portal.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No WebSocket protocol surface exists, and VideaHealth publishes no public API
+    of any kind. The company entry is recorded as an honest gated stub: apis: []
+    in apis.yml, with the plausible logical API areas captured here as an explicit
+    model (endpointsModeled: true) rather than fabricated as real endpoints. No
+    AsyncAPI document was created because there is no documented public transport
+    - WebSocket, SSE, or otherwise - to describe.
