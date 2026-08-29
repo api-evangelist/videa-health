@@ -13,6 +13,17 @@ description: VideaHealth (VideaAI) is an FDA-cleared dental artificial intellige
   are delivered through partner-gated, embedded integrations rather than a public,
   self-serve developer API; there is no publicly documented REST API, developer
   portal, SDK, or OpenAPI definition as of this writing.
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
