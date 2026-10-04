@@ -43,7 +43,7 @@ tags:
 - Medical Imaging
 - Radiograph Analysis
 - Diagnostics
-- Computer-Vision
+- Computer Vision
 - FDA Cleared
 - Gated API
 tags_raw:
@@ -56,6 +56,7 @@ tags_raw:
 - Computer Vision
 - FDA Cleared
 - Gated API
+- Computer-Vision
 created: '2026-07-05'
 modified: '2026-07-05'
 specificationVersion: '0.23'
