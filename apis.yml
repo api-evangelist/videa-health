@@ -58,10 +58,12 @@ tags_raw:
 - Gated API
 - Computer-Vision
 created: '2026-07-05'
-modified: '2026-07-05'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis: []
 common:
+- url: https://videa.ai/platform/insights
+  type: Blog
 - type: DomainSecurity
   url: security/videa-health-domain-security.yml
 - type: Website
