@@ -1,4 +1,4 @@
-# VideaHealth (videa-health)
+# VideaHealth
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,60 +64,80 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-VideaHealth (marketed as **VideaAI**, at [videa.ai](https://www.videa.ai)) is an FDA-cleared dental artificial-intelligence platform. It analyzes dental radiographs to detect clinical findings - such as caries, bone loss, calculus, and periapical lesions - and to surface aligner and implant treatment opportunities. VideaAI is designed as **ambient, chairside AI**: as soon as an X-ray is captured, the platform analyzes the image in the background and returns findings directly inside the tools clinicians already use. VideaAI reports analyzing hundreds of millions of X-rays annually across tens of thousands of clinicians and many of the largest dental service organizations (DSOs) in North America.
+VideaHealth (VideaAI) is an FDA-cleared dental artificial intelligence platform that analyzes dental radiographs to detect clinical findings such as caries, bone loss, calculus, and periapical lesions, and to surface aligner and implant treatment opportunities. VideaAI runs as ambient, chairside AI embedded directly inside dental practice-management and imaging systems (Dentrix, Denticon, Open Dental, Eaglesoft, Carestream, Dexis, Apteryx XVWeb, and others) - as soon as an X-ray is captured, the platform analyzes it and returns findings in the tools clinicians already use. Its detection, findings, study, and integration capabilities are delivered through partner-gated, embedded integrations rather than a public, self-serve developer API; there is no publicly documented REST API, developer portal, SDK, or OpenAPI definition as of this writing.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/videa-health/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/videa-health/refs/heads/main/apis.yml)
+**Areas:** Dental · Healthcare · Artificial Intelligence · Medical Imaging · Radiograph Analysis · Diagnostics · Computer Vision · FDA Cleared · Gated API
 
-## API Access Model — Partner-Gated / Embedded (Honest Stub)
+## VideaHealth on APIs.io
 
-**VideaHealth does not publish a public, self-serve developer API.** As of this writing there is:
+Everything profiled for VideaHealth is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/videa-health/](https://apis.io/providers/videa-health/)** — or go straight to one of the APIs or properties below.
 
-- **No public REST API reference or base URL**
-- **No developer portal, developer sign-up, or self-serve onboarding**
-- **No SDK or published OpenAPI definition**
-- **No documented WebSocket (`ws://` / `wss://`) or SSE streaming interface**
+### Published properties
 
-Instead, VideaAI is delivered **business-to-business and partner-gated**. The AI is embedded directly into the customer's existing practice-management and imaging software through commercial integration agreements. Organizations engage VideaHealth via a sales/demo process ("Book a Demo"); pricing is **contact-sales only** and is not published.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-This repository is therefore recorded as an **honest gated stub**: `apis: []` in `apis.yml`. No endpoints are asserted as real. The logical capability areas below are an explicit *model* of what a VideaHealth partner/developer API would plausibly expose based on the product's described behavior — they are **not documented, not confirmed, and must not be treated as real endpoints**.
+#### Security (1)
 
-## Modeled Logical APIs (not documented — illustrative only)
+Authentication, trust centre, and vulnerability disclosure.
 
-- **Image / Radiograph Analysis** — submit a dental radiograph (bitewing, periapical, panoramic) for AI analysis.
-- **Findings / Detections** — retrieve detected clinical findings (caries, bone loss, calculus, periapical lesions) with per-tooth localization and confidence scores.
-- **Studies** — group radiographs and findings into a patient study/exam and retrieve results.
-- **Integrations** — bind VideaAI into a practice-management or imaging system so captured X-rays are automatically analyzed and findings are surfaced in-context.
+- [Videa Health Domain Security](https://apis.io/security/videa-health/videa-health-domain-security/)
 
-## Embedded Integrations (product-level, not developer APIs)
+## Where to find this API
 
-VideaAI advertises embedding across the dental software ecosystem, including practice-management systems such as **Dentrix Core, Dentrix Ascend, Dentrix Enterprise, Denticon, Open Dental, and Eaglesoft**, and imaging software such as **Carestream, Dexis, Apteryx XVWeb, SOTA, Dentsply Sirona Sidexis, MiPACS, Gendex VixWin, Patterson Imaging, and others**. These are commercial, embedded integrations delivered by VideaHealth — not publicly documented APIs a third-party developer can call.
-
-## Tags
-
-- Dental
-- Healthcare
-- Artificial Intelligence
-- Medical Imaging
-- Radiograph Analysis
-- Diagnostics
-- Computer Vision
-- FDA Cleared
-- Gated API
-
-## Timestamps
-
-- **Created:** 2026-07-05
-- **Modified:** 2026-07-05
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.videa.ai)
-- [LinkedIn](https://www.linkedin.com/company/videaai)
-- [Resources](https://videa.ai/resources)
-- [Platform](https://www.videa.ai/platform)
-- [News](https://www.videa.ai/news)
+- [Blog](https://videa.ai/platform/insights)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 4.2** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 49.1 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 0.0 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 4.4** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/videa-health/](https://apis.io/providers/videa-health/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for VideaHealth: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/videa-health/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
